@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liminal Drip</title>
+<meta name="description" content="The space between.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #151210;
+    background: linear-gradient(-45deg, #FAF7F1, #E8E1D6, #F5F0E8, #DDD5C8, #F0EBE3, #E4DDD2);
+    background-size: 400% 400%;
+    animation: shimmer 20s ease infinite;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* --- Hero wrap: fills first viewport --- */
+  .hero-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+  }
+
+  .wordmark {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: #151210;
+  }
+
+  .contact-link {
+    font-size: 14px;
+    color: #5EA27A;
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-link:hover {
+    opacity: 0.7;
+  }
+
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 48px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 400;
+    color: #1E1A16;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .subline {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-style: italic;
+    color: #8A7E72;
+    text-align: center;
+  }
+
+  /* --- Ethos section --- */
+  .ethos {
+    padding: 120px 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ethos-inner {
+    max-width: 640px;
+  }
+
+  .ethos-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: #8A7E72;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+  }
+
+  .ethos-inner p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #1E1A16;
+    margin-bottom: 40px;
+  }
+
+  .ethos-inner p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ethos-inner p.pull {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-style: italic;
+    line-height: 1.5;
+    color: #151210;
+    margin-top: 24px;
+    margin-bottom: 56px;
+  }
+
+  /* --- Footer --- */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    border-top: 1px solid #C4B8A8;
+  }
+
+  footer span {
+    font-size: 12px;
+    color: #8A7E72;
+  }
+
+  footer a {
+    font-size: 12px;
+    color: #5EA27A;
+    transition: opacity 0.3s ease;
+  }
+
+  footer a:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 640px) {
+    header, footer { padding: 20px 24px; }
+    .hero { padding: 32px 24px; }
+    .ethos { padding: 80px 24px; }
+  }
+</style>
+</head>
+<body>
+  <section class="hero-wrap">
+    <header>
+      <span class="wordmark">LIMINAL DRIP</span>
+    </header>
+    <main class="hero">
+      <h1>LIMINAL DRIP</h1>
+      <p class="subline">The space between.</p>
+    </main>
+  </section>
+
+  <section class="ethos">
+    <div class="ethos-inner">
+      <p class="ethos-label">About</p>
+
+      <p>Liminal Drip is a bespoke software house. We craft intelligent systems through restraint, refinement, and sustained attention.</p>
+
+      <p class="ethos-label" style="margin-top: 64px;">Ethos</p>
+
+      <p>We exist in the space between states&mdash;between completion and emergence. The liminal is not a void. It is an active threshold where perception sharpens and new forms quietly assemble.</p>
+
+      <p class="pull">Each choice compounds. Each iteration clarifies. What emerges is not loud confidence but quiet inevitability.</p>
+
+      <p>Depth over scale. Resonance over reach. Continuity over acceleration. We absorb what endures and discard what distracts.</p>
+
+      <p class="ethos-label" style="margin-top: 64px;">Coming Soon</p>
+
+      <p>Yunto</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Liminal Drip LTD</span>
+    <a href="mailto:signal@liminaldrip.com">signal@liminaldrip.com</a>
+  </footer>
+</body>
+</html>
