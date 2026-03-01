@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Disclosure Agreement — Liminal Drip LTD</title>
+<meta name="description" content="One-way NDA for beta testers and collaborators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #151210;
+    --ink-headline: #1E1A16;
+    --ink-light: #8A7E72;
+    --ink-faint: #8A7E72;
+    --warm-cream: #EDE7DD;
+    --warm-border: #C4B8A8;
+    --accent: #5EA27A;
+    --accent-hover: #4E8D68;
+    --accent-glow: rgba(94, 162, 122, 0.12);
+    --red: #9b3232;
+    --green: #5EA27A;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: linear-gradient(-45deg, #FAF7F1, #E8E1D6, #F5F0E8, #DDD5C8, #F0EBE3, #E4DDD2);
+    background-size: 400% 400%;
+    animation: shimmer 20s ease infinite;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* --- Site header --- */
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+  }
+
+  .wordmark {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+  }
+
+  .contact-link {
+    font-size: 14px;
+    color: var(--accent);
+    transition: opacity 0.3s ease;
+  }
+
+  .contact-link:hover {
+    opacity: 0.7;
+  }
+
+  /* --- Page structure --- */
+  .page-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+  }
+
+  /* --- Document Header --- */
+  .doc-header {
+    text-align: center;
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--warm-border);
+  }
+
+  .company-name {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  .doc-title {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ink-headline);
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .doc-subtitle {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    font-weight: 400;
+  }
+
+  /* --- Summary section --- */
+  .summary-section {
+    margin-bottom: 2rem;
+  }
+
+  .summary-title {
+    font-family: var(--sans);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .summary-intro {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.1rem 1.2rem;
+    background: var(--warm-cream);
+    border: 1px solid var(--warm-border);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .summary-card:hover {
+    border-color: #a89b8c;
+  }
+
+  .card-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--ink-light);
+  }
+
+  .card-content {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .card-content strong {
+    display: block;
+    margin-bottom: 0.15rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .summary-footer {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* --- Legal toggle --- */
+  .legal-toggle-wrapper {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--warm-border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .legal-toggle:hover {
+    background: var(--warm-cream);
+    border-color: #a89b8c;
+  }
+
+  .toggle-arrow {
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .legal-toggle[aria-expanded="true"] .toggle-arrow {
+    transform: rotate(180deg);
+  }
+
+  .nda-body.collapsed {
+    display: none;
+  }
+
+  .nda-body.expanded {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* --- NDA Body --- */
+  .nda-body {
+    margin-bottom: 3rem;
+  }
+
+  .nda-body p {
+    margin-bottom: 1rem;
+  }
+
+  .nda-body .recital {
+    margin-bottom: 0.8rem;
+  }
+
+  .section-heading {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--warm-border);
+  }
+
+  .sub-item {
+    padding-left: 1.8rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+  }
+
+  .sub-item::before {
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+
+  .definition {
+    font-weight: 600;
+  }
+
+  .all-caps {
+    font-size: 0.95em;
+  }
+
+  .subsection {
+    margin-bottom: 1rem;
+  }
+
+  .subsection-label {
+    font-weight: 600;
+  }
+
+  /* --- Agreement Form --- */
+  .agreement-section {
+    background: var(--warm-cream);
+    border: 1px solid var(--warm-border);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    margin-top: 3rem;
+  }
+
+  .agreement-section h2 {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .agreement-section .instructions {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    margin-bottom: 1.8rem;
+    line-height: 1.5;
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink-light);
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.02em;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--warm-border);
+    border-radius: 5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  .form-group input::placeholder {
+    color: #bbb;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin: 1.8rem 0;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid var(--warm-border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .checkbox-group:hover {
+    border-color: var(--accent);
+  }
+
+  .checkbox-group.checked {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-group label {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--ink);
+    line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .btn-agree {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-agree:hover:not(:disabled) {
+    background: var(--accent-hover);
+    box-shadow: 0 2px 12px var(--accent-glow);
+  }
+
+  .btn-agree:active:not(:disabled) {
+    transform: scale(0.99);
+  }
+
+  .btn-agree:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .form-footer {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+  /* --- Status messages --- */
+  .status-msg {
+    display: none;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .status-msg.success {
+    display: block;
+    background: #eef6f0;
+    color: var(--green);
+    border: 1px solid #c6dece;
+  }
+
+  .status-msg.error {
+    display: block;
+    background: #fdf0f0;
+    color: var(--red);
+    border: 1px solid #e6c8c8;
+  }
+
+  .status-msg.sending {
+    display: block;
+    background: #f5f3f0;
+    color: var(--ink-light);
+    border: 1px solid var(--warm-border);
+  }
+
+  /* --- Confirmation overlay --- */
+  .confirmation-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(21, 18, 16, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+  }
+
+  .confirmation-overlay.active {
+    display: flex;
+  }
+
+  .confirmation-box {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 460px;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .confirmation-box h3 {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .confirmation-box p {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .confirmation-box .summary {
+    background: var(--warm-cream);
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .confirmation-box .summary strong {
+    color: var(--ink);
+  }
+
+  .confirmation-buttons {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .btn-cancel {
+    flex: 1;
+    padding: 0.7rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-light);
+    background: var(--warm-cream);
+    border: 1px solid var(--warm-border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-cancel:hover { background: #e4ded4; }
+
+  .btn-confirm {
+    flex: 1;
+    padding: 0.7rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-confirm:hover { background: var(--accent-hover); }
+
+  /* --- Site footer --- */
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    border-top: 1px solid var(--warm-border);
+  }
+
+  .site-footer span {
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  .site-footer a {
+    font-size: 12px;
+    color: var(--accent);
+    transition: opacity 0.3s ease;
+  }
+
+  .site-footer a:hover {
+    opacity: 0.7;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 640px) {
+    .site-header, .site-footer { padding: 20px 24px; }
+    .page-wrapper { padding: 1.5rem 1.2rem 3rem; }
+    .doc-title { font-size: 1.6rem; }
+    .agreement-section { padding: 1.8rem 1.2rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* --- Print --- */
+  @media print {
+    body { background: #fff; animation: none; }
+    .site-header, .site-footer { display: none; }
+    .agreement-section { break-inside: avoid; }
+    .btn-agree, .form-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a href="/" class="wordmark">LIMINAL DRIP</a>
+    <a href="mailto:trust@liminaldrip.com" class="contact-link">trust@liminaldrip.com</a>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- Document Header -->
+    <header class="doc-header">
+      <div class="company-name">Liminal Drip LTD</div>
+      <h1 class="doc-title">Non-Disclosure Agreement</h1>
+      <div class="doc-subtitle">One-Way — Disclosing Party</div>
+    </header>
+
+    <!-- Plain-English Summary -->
+    <div class="summary-section">
+      <h2 class="summary-title">Before You Dive In</h2>
+      <p class="summary-intro">First off — thank you for helping us test. Seriously. You're seeing something before the rest of the world does, and that means a lot. Here's what we're asking:</p>
+
+      <div class="summary-cards">
+        <div class="summary-card">
+          <span class="card-icon"><i data-lucide="handshake" width="20" height="20" stroke-width="1.5"></i></span>
+          <div class="card-content">
+            <strong>Keep it between us.</strong>
+            What you see in the app stays between you and us — don't share details about it publicly or with people who aren't also testing.
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <span class="card-icon"><i data-lucide="eye-off" width="20" height="20" stroke-width="1.5"></i></span>
+          <div class="card-content">
+            <strong>No screenshots or screen recordings.</strong>
+            We know it's tempting, but please don't capture or share what's on screen. It's not ready for the world yet.
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <span class="card-icon"><i data-lucide="message-circle" width="20" height="20" stroke-width="1.5"></i></span>
+          <div class="card-content">
+            <strong>Your feedback is gold — and it helps shape the product.</strong>
+            If you suggest something or flag a bug, we might build on it. Just know that feedback you share with us becomes part of our process.
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <span class="card-icon"><i data-lucide="calendar" width="20" height="20" stroke-width="1.5"></i></span>
+          <div class="card-content">
+            <strong>This covers a 2-year window.</strong>
+            The agreement stays active for two years, even after you're done testing. That's pretty standard for this kind of thing.
+          </div>
+        </div>
+      </div>
+
+      <p class="summary-footer">This is a real agreement — the full legal version is below if you want to read it. The form at the bottom is how you accept.</p>
+    </div>
+
+    <!-- Full Legal Text -->
+    <div class="legal-toggle-wrapper">
+      <button class="legal-toggle" id="legalToggle" aria-expanded="false">
+        <span class="toggle-text">Read Full Legal Agreement</span>
+        <span class="toggle-arrow">&#9662;</span>
+      </button>
+    </div>
+
+    <div class="nda-body collapsed" id="ndaBody">
+
+      <p>This Non-Disclosure Agreement (this <span class="definition">"Agreement"</span>) is entered into as of the date of electronic acceptance below (the <span class="definition">"Effective Date"</span>), by and between:</p>
+
+      <p><strong>Disclosing Party:</strong> Liminal Drip LTD, an Ohio limited liability company (<span class="definition">"Company"</span>); and</p>
+
+      <p><strong>Receiving Party:</strong> The individual identified in the acceptance form below (<span class="definition">"Recipient"</span>).</p>
+
+      <p>Company and Recipient may each be referred to individually as a <span class="definition">"Party"</span> and collectively as the <span class="definition">"Parties."</span></p>
+
+      <p class="recital"><strong>WHEREAS,</strong> the Company possesses certain confidential and proprietary information relating to its products, services, technology, and business operations; and</p>
+
+      <p class="recital"><strong>WHEREAS,</strong> the Recipient desires to receive access to such information for the purpose of beta testing, evaluating, or otherwise engaging with the Company's products and services (the <span class="definition">"Purpose"</span>);</p>
+
+      <p><strong>NOW, THEREFORE,</strong> in consideration of the mutual covenants herein and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:</p>
+
+      <!-- Section 1 -->
+      <div class="section-heading">1. Definition of Confidential Information</div>
+
+      <p><span class="definition">"Confidential Information"</span> means any and all non-public information disclosed by the Company to the Recipient, whether orally, in writing, electronically, visually, or by any other means, including but not limited to:</p>
+
+      <div class="sub-item">(a) software source code, object code, algorithms, data structures, architecture, designs, prototypes, and technical documentation;</div>
+      <div class="sub-item">(b) product plans, roadmaps, features (whether released or unreleased), user interface designs, and user experience workflows;</div>
+      <div class="sub-item">(c) business plans, financial information, pricing models, marketing strategies, customer lists, and partnership arrangements;</div>
+      <div class="sub-item">(d) trade secrets as defined under the Ohio Uniform Trade Secrets Act (&sect;1333.61 et seq. of the Ohio Revised Code) and the federal Defend Trade Secrets Act (18 U.S.C. &sect;1836 et seq.);</div>
+      <div class="sub-item">(e) any information that a reasonable person would understand to be confidential given the nature of the information and the circumstances of disclosure.</div>
+
+      <!-- Section 2 -->
+      <div class="section-heading">2. Exclusions from Confidential Information</div>
+
+      <p>Confidential Information does not include information that the Recipient can demonstrate by competent evidence:</p>
+
+      <div class="sub-item">(a) was already in the public domain at the time of disclosure, or subsequently became publicly available through no fault or breach by the Recipient;</div>
+      <div class="sub-item">(b) was already known to the Recipient prior to disclosure, without obligation of confidentiality;</div>
+      <div class="sub-item">(c) was independently developed by the Recipient without use of or reference to the Confidential Information; or</div>
+      <div class="sub-item">(d) was lawfully obtained from a third party who had no obligation of confidentiality to the Company.</div>
+
+      <!-- Section 3 -->
+      <div class="section-heading">3. Obligations of the Recipient</div>
+
+      <p>The Recipient agrees to:</p>
+
+      <div class="sub-item">(a) hold the Confidential Information in strict confidence and not disclose it to any third party without the prior written consent of the Company;</div>
+      <div class="sub-item">(b) use the Confidential Information solely for the Purpose described herein and for no other purpose;</div>
+      <div class="sub-item">(c) protect the Confidential Information using the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care;</div>
+      <div class="sub-item">(d) limit access to the Confidential Information to those of its employees, agents, or advisors who have a need to know for the Purpose and who are bound by confidentiality obligations at least as restrictive as those in this Agreement;</div>
+      <div class="sub-item">(e) promptly notify the Company in writing of any unauthorized use or disclosure of the Confidential Information of which the Recipient becomes aware.</div>
+
+      <!-- Section 4 -->
+      <div class="section-heading">4. Prohibition on Public Disclosure</div>
+
+      <p>The Recipient shall not, without the prior written consent of the Company, publicly disclose, discuss, or reference any aspect of the Confidential Information, the Company's products, or the Recipient's relationship with the Company, including but not limited to:</p>
+
+      <div class="sub-item">(a) posting screenshots, screen recordings, descriptions, or reviews on social media platforms, application review sites, forums, blogs, or any other publicly accessible medium;</div>
+      <div class="sub-item">(b) sharing or demonstrating the Company's products or materials to individuals who are not parties to this Agreement;</div>
+      <div class="sub-item">(c) discussing features, functionality, design, or performance of the Company's products in any public or semi-public setting.</div>
+
+      <!-- Section 5 -->
+      <div class="section-heading">5. Feedback and Intellectual Property Assignment</div>
+
+      <p class="subsection"><span class="subsection-label">5.1</span> The Recipient may, during the course of the Purpose, provide suggestions, comments, ideas, improvements, feature requests, bug reports, or other feedback to the Company (collectively, <span class="definition">"Feedback"</span>).</p>
+
+      <p class="subsection"><span class="subsection-label">5.2</span> The Recipient hereby irrevocably assigns to the Company all right, title, and interest in and to any Feedback, including all intellectual property rights therein. The Recipient agrees that the Company is free to use, implement, disclose, reproduce, license, distribute, and otherwise commercialize any Feedback without restriction, attribution, or compensation to the Recipient.</p>
+
+      <p class="subsection"><span class="subsection-label">5.3</span> The Recipient waives any moral rights or equivalent rights in the Feedback to the extent permitted by applicable law.</p>
+
+      <p class="subsection"><span class="subsection-label">5.4</span> To the extent any assignment under this Section 5 is not effective under applicable law, the Recipient grants the Company a perpetual, irrevocable, worldwide, royalty-free, fully paid-up, exclusive license to use, modify, and exploit the Feedback in any manner.</p>
+
+      <!-- Section 6 -->
+      <div class="section-heading">6. No Rights Granted</div>
+
+      <p>Nothing in this Agreement grants the Recipient any license, ownership interest, or other right in or to the Confidential Information or any intellectual property of the Company. All Confidential Information remains the sole and exclusive property of the Company.</p>
+
+      <!-- Section 7 -->
+      <div class="section-heading">7. Compelled Disclosure</div>
+
+      <p>If the Recipient is compelled by law, regulation, or valid legal process to disclose any Confidential Information, the Recipient shall, to the extent legally permitted, provide the Company with prompt written notice of such requirement prior to disclosure, so that the Company may seek a protective order or other appropriate remedy. The Recipient shall disclose only the minimum amount of Confidential Information required by such legal process.</p>
+
+      <!-- Section 8 -->
+      <div class="section-heading">8. Return and Destruction of Materials</div>
+
+      <p>Upon the Company's written request, or upon the termination or expiration of this Agreement, the Recipient shall promptly return or destroy all copies, notes, summaries, and other materials containing or derived from Confidential Information, and shall certify such return or destruction in writing.</p>
+
+      <!-- Section 9 -->
+      <div class="section-heading">9. Term and Survival</div>
+
+      <p class="subsection"><span class="subsection-label">9.1</span> This Agreement shall remain in effect from the Effective Date until the earlier of: (a) written notice of termination by either Party with thirty (30) days' advance notice; or (b) two (2) years from the Effective Date.</p>
+
+      <p class="subsection"><span class="subsection-label">9.2</span> The Recipient's obligations of confidentiality under this Agreement shall survive the termination or expiration of this Agreement for a period of two (2) years. Obligations with respect to trade secrets shall survive for as long as the information qualifies as a trade secret under applicable law.</p>
+
+      <!-- Section 10 -->
+      <div class="section-heading">10. Remedies</div>
+
+      <p>The Recipient acknowledges that any breach or threatened breach of this Agreement may cause irreparable harm to the Company for which monetary damages would be inadequate. Accordingly, the Company shall be entitled to seek injunctive or other equitable relief in addition to any other remedies available at law or in equity, without the necessity of proving actual damages or posting a bond.</p>
+
+      <!-- Section 11 -->
+      <div class="section-heading">11. No Warranty</div>
+
+      <p class="all-caps">ALL CONFIDENTIAL INFORMATION IS PROVIDED "AS IS." THE COMPANY MAKES NO WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE ACCURACY, COMPLETENESS, OR FITNESS FOR A PARTICULAR PURPOSE OF ANY CONFIDENTIAL INFORMATION DISCLOSED HEREUNDER.</p>
+
+      <!-- Section 12 -->
+      <div class="section-heading">12. General Provisions</div>
+
+      <p class="subsection"><span class="subsection-label">12.1 Governing Law.</span> This Agreement shall be governed by and construed in accordance with the laws of the State of Ohio, without regard to its conflict of laws principles.</p>
+
+      <p class="subsection"><span class="subsection-label">12.2 Dispute Resolution.</span> Any dispute arising out of or relating to this Agreement shall be resolved in the state or federal courts located in the State of Ohio, and each Party consents to the exclusive jurisdiction and venue of such courts.</p>
+
+      <p class="subsection"><span class="subsection-label">12.3 Entire Agreement.</span> This Agreement constitutes the entire agreement between the Parties with respect to its subject matter and supersedes all prior or contemporaneous agreements, understandings, or representations, whether oral or written.</p>
+
+      <p class="subsection"><span class="subsection-label">12.4 Amendments.</span> This Agreement may be amended or modified only by a written instrument signed by both Parties.</p>
+
+      <p class="subsection"><span class="subsection-label">12.5 Severability.</span> If any provision of this Agreement is held to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+      <p class="subsection"><span class="subsection-label">12.6 Waiver.</span> No waiver of any breach of this Agreement shall constitute a waiver of any subsequent breach. No waiver shall be effective unless in writing and signed by the waiving Party.</p>
+
+      <p class="subsection"><span class="subsection-label">12.7 Assignment.</span> The Recipient may not assign or transfer this Agreement or any rights or obligations hereunder without the prior written consent of the Company. The Company may freely assign this Agreement.</p>
+
+      <p class="subsection"><span class="subsection-label">12.8 Electronic Acceptance.</span> The Parties agree that electronic acceptance of this Agreement, including submission through the Company's online acceptance form, shall constitute a valid and binding signature under the Electronic Signatures in Global and National Commerce Act (E-SIGN Act, 15 U.S.C. &sect;7001 et seq.) and the Ohio Uniform Electronic Transactions Act (&sect;1306.01 et seq. of the Ohio Revised Code).</p>
+
+      <p class="subsection"><span class="subsection-label">12.9 Notices.</span> All notices under this Agreement shall be in writing and delivered to the email addresses provided at the time of acceptance.</p>
+
+      <p class="subsection"><span class="subsection-label">12.10 Consent to Electronic Service.</span> The Recipient consents to service of process and delivery of all notices under this Agreement via email at the address provided at the time of electronic acceptance. Such service shall be deemed effective upon transmission to the designated email address.</p>
+
+      <p class="subsection"><span class="subsection-label">12.11 Obligation to Update Contact Information.</span> The Recipient agrees to promptly notify the Company in writing of any change in contact information, including email address, for the duration of this Agreement and any surviving obligations hereunder.</p>
+
+    </div>
+
+    <!-- Agreement Form -->
+    <div class="agreement-section" id="agreementSection">
+      <h2>Accept This Agreement</h2>
+      <p class="instructions">By completing the form below and clicking "I Agree," you acknowledge that you have read, understood, and agree to be bound by all terms of this Non-Disclosure Agreement.</p>
+
+      <form id="ndaForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Legal Name *</label>
+            <input type="text" id="fullName" name="full_name" placeholder="Jane Smith" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Hidden fields for the email -->
+        <input type="hidden" name="agreement_type" value="Non-Disclosure Agreement (One-Way)">
+        <input type="hidden" name="company" value="Liminal Drip LTD">
+        <input type="hidden" id="timestampField" name="accepted_at" value="">
+        <input type="hidden" id="userAgentField" name="user_agent" value="">
+        <input type="hidden" id="ipNote" name="ip_note" value="IP address captured by Formspree automatically">
+
+        <div class="checkbox-group" id="checkboxGroup">
+          <input type="checkbox" id="agreeCheck" name="confirmed" value="yes" required>
+          <label for="agreeCheck">I have read and understood the terms of this Non-Disclosure Agreement, and I voluntarily agree to be bound by its terms. I understand this constitutes a legally binding agreement.</label>
+        </div>
+
+        <button type="submit" class="btn-agree" id="btnAgree" disabled>I Agree to the Terms of This NDA</button>
+
+        <div class="form-footer">
+          Your acceptance will be recorded with a timestamp and sent to Liminal Drip LTD for their records.
+        </div>
+      </form>
+
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="confirmation-overlay" id="confirmOverlay">
+    <div class="confirmation-box">
+      <h3>Before We Proceed</h3>
+      <p>You are entering a binding agreement with Liminal Drip LTD. Please confirm the details below are correct.</p>
+      <div class="summary" id="confirmSummary"></div>
+      <div class="confirmation-buttons">
+        <button class="btn-cancel" id="btnCancel">Go Back</button>
+        <button class="btn-confirm" id="btnConfirm">Confirm &amp; Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <span>&copy; 2026 Liminal Drip LTD</span>
+    <a href="mailto:trust@liminaldrip.com">trust@liminaldrip.com</a>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+  (function() {
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // =====================================================
+    // SETUP: Replace this URL with your Formspree endpoint
+    // =====================================================
+    // 1. Go to https://formspree.io and create a free account
+    // 2. Create a new form — you'll get an endpoint like:
+    //    https://formspree.io/f/xAbCdEfG
+    // 3. Paste that URL below:
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzbnbbe";
+    // =====================================================
+
+    // Legal text toggle
+    const legalToggle = document.getElementById("legalToggle");
+    const ndaBody = document.getElementById("ndaBody");
+
+    legalToggle.addEventListener("click", function() {
+      const isExpanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", !isExpanded);
+      ndaBody.classList.toggle("collapsed", isExpanded);
+      ndaBody.classList.toggle("expanded", !isExpanded);
+      this.querySelector(".toggle-text").textContent =
+        isExpanded ? "Read Full Legal Agreement" : "Hide Full Legal Agreement";
+    });
+
+    const form = document.getElementById("ndaForm");
+    const btn = document.getElementById("btnAgree");
+    const checkbox = document.getElementById("agreeCheck");
+    const checkboxGroup = document.getElementById("checkboxGroup");
+    const statusMsg = document.getElementById("statusMsg");
+    const overlay = document.getElementById("confirmOverlay");
+    const confirmSummary = document.getElementById("confirmSummary");
+    const btnCancel = document.getElementById("btnCancel");
+    const btnConfirm = document.getElementById("btnConfirm");
+
+    // Toggle button state
+    checkbox.addEventListener("change", function() {
+      btn.disabled = !this.checked;
+      checkboxGroup.classList.toggle("checked", this.checked);
+    });
+
+    // Form submit → show confirmation modal
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (!name || !email) {
+        showStatus("Please fill in all required fields.", "error");
+        return;
+      }
+
+      const now = new Date();
+      confirmSummary.innerHTML =
+        `<strong>Name:</strong> ${escapeHtml(name)}<br>` +
+        `<strong>Email:</strong> ${escapeHtml(email)}<br>` +
+        `<strong>Date:</strong> ${now.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}<br>` +
+        `<strong>Time:</strong> ${now.toLocaleTimeString("en-US")}`;
+
+      overlay.classList.add("active");
+    });
+
+    // Cancel
+    btnCancel.addEventListener("click", function() {
+      overlay.classList.remove("active");
+    });
+
+    // Close on overlay background click
+    overlay.addEventListener("click", function(e) {
+      if (e.target === overlay) overlay.classList.remove("active");
+    });
+
+    // Confirm → submit to Formspree
+    btnConfirm.addEventListener("click", async function() {
+      overlay.classList.remove("active");
+
+      const now = new Date().toISOString();
+      document.getElementById("timestampField").value = now;
+      document.getElementById("userAgentField").value = navigator.userAgent;
+
+      btn.disabled = true;
+      btn.textContent = "Submitting...";
+      showStatus("Recording your agreement...", "sending");
+
+      try {
+        const formData = new FormData(form);
+
+        // Add a human-readable subject for the email
+        formData.append("_subject", `NDA Signed: ${formData.get("full_name")}`);
+
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          showStatus(
+            "Agreement recorded successfully. A confirmation has been sent to Liminal Drip LTD. Thank you.",
+            "success"
+          );
+          form.style.display = "none";
+        } else {
+          const data = await response.json();
+          throw new Error(data.error || "Submission failed");
+        }
+      } catch (err) {
+        showStatus(
+          "There was an error recording your agreement. Please contact Liminal Drip LTD directly. (" + escapeHtml(err.message) + ")",
+          "error"
+        );
+        btn.disabled = false;
+        btn.textContent = "I Agree to the Terms of This NDA";
+      }
+    });
+
+    function showStatus(msg, type) {
+      statusMsg.className = "status-msg " + type;
+      statusMsg.textContent = msg;
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str;
+      return div.innerHTML;
+    }
+  })();
+  </script>
+
+</body>
+</html>
